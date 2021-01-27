@@ -1,0 +1,391 @@
+.navbar {
+    background-color: #6B032F;
+    font-family: 'Red Rose', cursive;
+    color: #ffffff;
+}
+
+.dropdown-menu {
+    background-color: #E0E0E0 !important;
+    min-width: 200px !important;
+}
+
+body{
+    background-color: #a107027a;
+    font-family: "Montserrat";
+    color: black;
+}
+
+.row {
+    margin: 0px;
+}
+
+.container {
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+ul {
+    margin: 7 0 7 10;
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
+}
+
+.title {
+    letter-spacing: 6px;
+}
+
+/*Beginning of overview*/
+
+.header {
+    /* margin: 0 0 30 20; */
+    font-size: 22px;
+    font-weight: 800;
+}
+
+.case_holder {
+    font-family: 'Gill Sans', sans-serif;
+    background-color: #e26c6a;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    box-shadow: 0 4px 8px 0  rgba(0, 0, 0, 0.3);
+}
+
+.content_case {
+    position: relative;
+    top: -10px;
+    font-family: "Montserrat";
+    width: 200px;
+    height: 100px;
+    text-align: center;
+}
+
+#number {
+    position: relative;
+    top: -10px;
+    font-style:normal;
+    font-weight:bolder;
+    font-size: 36px;
+    line-height: 44px;
+    color: #000000;
+}
+
+.caseword {
+   position: relative;
+   font-family: "Tienne";
+   color: white;
+   font-size: 14px;
+   top: -50px
+}
+
+/*End of overview*/
+
+.table{
+  background-color: #550526;
+  width: 100%;
+  border: 15px;
+  padding: 20px;
+}
+
+.inside_table{
+  background-color: lightgrey;
+  width: 100%;
+  padding: 50px;
+}
+
+
+form label {
+    font-weight: bold;
+}
+
+
+.form-upload {
+    display: flex;
+}
+
+.inputs {
+    border: solid 1px rgb(116, 115, 115);
+    background-color: white;
+    cursor: pointer;
+    height: 28px;
+    margin-bottom: 15px;
+}
+
+.btn{
+    background-color: #F2C14E !important;
+    border-color: #bd9333 !important;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 30px;
+}
+
+.btn-reset {
+    background-color: #368F8B !important;
+    border-color:#207a76   !important;
+}
+
+.card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #E26C69;
+    border-radius: 0px;
+    height: 180px;
+    width: 180px;
+    margin: 20px;
+    box-shadow: 0 4px 8px 0  rgba(0, 0, 0, 0.3);
+}
+
+.fa{
+    font-size: 30px;
+    margin: 10px;
+}
+
+.num-cases{
+    font-size: 30px;
+    font-weight: 800;
+    margin: 0px;
+    color: #000000;
+}
+
+.case-type{
+    font-family: "Tienne";
+    color: white;
+    font-size: 14px;
+}
+
+table, td, th { 
+    border: 1px solid ; 
+    text-align: left;
+} 
+table { 
+    border-collapse: collapse; 
+    width: 100%;
+    /* table-layout: fixed; */
+} 
+.table-data{ 
+    position: relative; 
+    left:150px; 
+    top:100px; 
+} 
+th, td { 
+    padding: 10px; 
+    font-size: 13px;
+}
+
+th {
+    padding: 3px; 
+    font-weight: 600;
+}
+
+label {
+    color: black;
+}
+
+#cases_table{
+    position: relative;
+    font-size: 14px;
+}
+
+#country_table{
+    position: relative;
+    font-size: 14px;
+}
+
+#months {
+    position: relative;
+    font-size: 14px;
+}
+
+.label {
+    position: relative;
+    margin-right: 5px;
+    top: 5px;
+    color: white;
+}
+
+.select {
+    position: relative;
+    margin-right: 15px;
+    top: 5px;
+}
+
+.input {
+    position: relative;
+    font-size: 14px;
+    margin-right: 15px;
+    top: 5px;
+}
+
+#top-row {
+    position: relative;
+    width: 1000px;
+    height: 36px;
+    float: left;
+}
+
+#dates {
+    position: relative;
+    top: 20px;
+    margin-bottom: 50px;
+    width: 830px;
+    height: 36px;
+    float: left;
+}
+
+.filter_btn {
+    position: absolute;
+    height: 36px;
+    width: 70px;
+}
+
+.reset_btn {
+    position: absolute;
+    height: 36px;
+    width: 70px;
+}
+
+#report_gen_header {
+    position: relative;
+    top: 75px;
+}
+
+#report_gen_container {
+    position: relative;
+    border-radius: 20px;
+}
+
+#daily_container {
+    position: relative;
+    border-radius: 20px;
+}
+
+#death_sum_header {
+    position: relative;
+    top: 75px;
+}
+
+#death_sum_container {
+    position: relative;
+    border-radius: 20px;
+    top: 75px;
+}
+
+#conts_header {
+    position: relative;
+    top: 150px;
+}
+
+#conts_container {
+    position: relative;
+    border-radius: 20px;
+    top: 150px;
+}
+
+#table_biggercont{
+    position: relative;
+    margin: auto;
+    width: 1020px;
+}
+
+#tablecont_continent{
+    position: relative;
+    margin: auto;
+    width: 1020px;
+}
+
+#case_rep_table{
+    position: relative;
+    bottom: 20px;
+}
+
+#filter_case_rep{
+    left: 980px;
+    bottom: 10px;
+}
+
+#reset_case_rep{
+    left: 905px;
+    bottom: 10px;
+}
+
+#reset_WHO{
+    left: 905px;
+    bottom: 10px;
+}
+
+#filter_WHO{
+    left: 985px;
+    bottom: 10px;
+}
+
+#reset_deathSUM{
+    left: 905px;
+    bottom: 10px;
+}
+
+#filter_deathSUM{
+    left: 985px;
+    bottom: 10px;
+}
+
+#filter_bycont{
+    left: 985px;
+    bottom: 10px;
+}
+
+#reset_bycont{
+    left: 905px;
+    bottom: 10px;
+}
+
+#region_label {
+    color: black;
+}
+
+#allcase_label {
+    color: white;
+}
+
+#recent_label {
+    color: white;
+}
+
+#report_label {
+    color: black;
+}
+
+#death_overview_header {
+    position: relative;
+    top: 225px;
+}
+
+#death_overview_container {
+    position: relative;
+    border-radius: 20px;
+    top: 225px;
+}
+
+#reset_deathOVR{
+    left: 905px;
+    bottom: 10px;
+}
+
+#filter_deathOVR{
+    left: 985px;
+    bottom: 10px;
+}
+
+#sel_div {
+    position: absolute;
+    width: 450px;
+    left: 500px;
+    bottom: 0px;
+}
