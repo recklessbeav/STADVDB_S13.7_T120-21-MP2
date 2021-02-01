@@ -42,7 +42,7 @@
     <div class="container">
         
         <div class="container px-5 pt-5 pb-3" style="background-color: #550526;">
-            <form method="post">
+            <form method="post" action="roll">
                 <div class="row">
                     <div id = "top-row">
                         <label class="label" for="roll_table">Roll-Up & Drill-Down</label>
@@ -95,7 +95,7 @@
                                 <td><%=data.active_cases %></td>
                             </tr>
                             <%  i++; }) %>
-                            <% } else if (Data1.length==0 && Data2.length==0 && Data3.length==0 && Data4.length==0){ %>
+                            <% } else if (Data1.length==0 && Data2.length==0){ %>
                                 <tr>
                                     <td colspan="9">No Data Found</td>
                                 </tr>
@@ -141,7 +141,7 @@
         </div>
 
         <div class="container px-5 pt-5 pb-3" style="background-color: #550526;">
-            <form method="post">
+            <form method="post" action="dice">
                 <div class="row">
                     <div id = "top-row">
                         <label class="label" for="dice_table">Dice</label>
@@ -154,6 +154,18 @@
                             <option value="North America">North America</option>
                             <option value="South America">South America</option>
                             <option value="Australia/Oceania">Australia/Oceania</option>
+                        </select>
+
+                        <label class="label" for="dice_date">Month</label>
+                        <select class="select" id="dice_date" name="dice_date"
+                            style="border: solid 1px rgb(116, 115, 115); background-color: white; cursor: pointer; height: 28px; margin-bottom: 15px">
+                            <option value="1" selected>January</option>
+                            <option value="2">February</option>
+                            <option value="3">March</option>
+                            <option value="4">April</option>
+                            <option value="5">May</option>
+                            <option value="6">June</option>
+                            <option value="7">July</option>
                         </select>
                         
                     </div>
@@ -200,7 +212,7 @@
                                 <td><%=data.active_cases %></td>
                             </tr>
                             <%  i++; }) %>
-                            <% } else if (Data1.length==0 && Data2.length==0 && Data3.length==0 && Data4.length==0){ %>
+                            <% } else if (Data3.length==0){ %>
                                 <tr>
                                     <td colspan="9">No Data Found</td>
                                 </tr>
@@ -214,19 +226,19 @@
         </div>
 
         <div class="container px-5 pt-5 pb-3" style="background-color: #550526;">
-            <form method="post">
+            <form method="post" action="slice">
                 <div class="row">
                     <div id = "top-row">
                         <label class="label" for="slice_table">Slice</label>
                         <select class="select" id="slice_table" name="slice_table"
                             style="border: solid 1px rgb(116, 115, 115); background-color: white; cursor: pointer; height: 28px; margin-bottom: 15px">
                             <option value="None" selected>None</option>
-                            <option value="New Cases">New Cases</option>
-                            <option value="Total Deaths">Total Deaths</option>
-                            <option value="New Deaths">New Deaths</option>
-                            <option value="Total Recovered">Total Recovered</option>
-                            <option value="New Recovered">New Recovered</option>
-                            <option value="Active Cases">Active Cases</option>
+                            <option value="new_cases">New Cases</option>
+                            <option value="total_deaths">Total Deaths</option>
+                            <option value="new_deaths">New Deaths</option>
+                            <option value="total_recovered">Total Recovered</option>
+                            <option value="new_recovered">New Recovered</option>
+                            <option value="active_cases">Active Cases</option>
                         </select>
                         
                     </div>
@@ -245,8 +257,13 @@
                             <!-- Slice -->
                             <tr>
                                 <%if(Data4.length!=0){%>
-                                <th>Month</th>
-                                <th>Total Covid Cases</th>
+                                    <th>Month</th>
+                                    <th>New Cases</th>
+                                    <th>Total Deaths</th>
+                                    <th>New Deaths</th>
+                                    <th>Total Recovered</th>
+                                    <th>New Recovered</th>
+                                    <th>Active Cases</th>
                                 <% } %>
                             </tr>
                             <%
@@ -256,10 +273,15 @@
                             %>
                             <tr>
                                 <td><%=data.month %></td>
-                                <td><%=data.total_covid_cases %></td>
+                                <td><%=data.new_cases %></td>
+                                <td><%=data.total_deaths %></td>
+                                <td><%=data.new_deaths %></td>
+                                <td><%=data.total_recovered %></td>
+                                <td><%=data.new_recovered %></td>
+                                <td><%=data.active_cases %></td>
                             </tr>
                             <%  i++; }) %>
-                            <% } else if (Data1.length==0 && Data2.length==0 && Data3.length==0 && Data4.length==0){ %>
+                            <% } else if (Data4.length==0){ %>
                                 <tr>
                                     <td colspan="9">No Data Found</td>
                                 </tr>
