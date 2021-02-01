@@ -45,14 +45,14 @@
             <form method="post">
                 <div class="row">
                     <div id = "top-row">
-                        <label class="label" for="cases_table">OLAP Operation</label>
-                        <select class="select" id="cases_table" name="cases_table"
+                        <label class="label" for="roll_table">Roll-Up & Drill-Down</label>
+                        <select class="select" id="roll_table" name="roll_table"
                             style="border: solid 1px rgb(116, 115, 115); background-color: white; cursor: pointer; height: 28px; margin-bottom: 15px">
                             <option value="None" selected>None</option>
                             <option value="Roll_Up">Roll Up</option>
                             <option value="Drill_Down">Drill Down</option>
-                            <option value="Dice">Dice</option>
-                            <option value="Slice">Slice</option>
+                            <!--<option value="Dice">Dice</option>-->
+                            <!--<option value="Slice">Slice</option>-->
                         </select>
                         
                     </div>
@@ -133,7 +133,42 @@
                             <%  i++; }) %>
                             <% }%>
                             <!-- End of Drill Down -->
+                        </table>
+                        <br>
+                    </div>
+                 </div>
+            </form>
+        </div>
 
+        <div class="container px-5 pt-5 pb-3" style="background-color: #550526;">
+            <form method="post">
+                <div class="row">
+                    <div id = "top-row">
+                        <label class="label" for="dice_table">Dice</label>
+                        <select class="select" id="dice_table" name="dice_table"
+                            style="border: solid 1px rgb(116, 115, 115); background-color: white; cursor: pointer; height: 28px; margin-bottom: 15px">
+                            <option value="None" selected>None</option>
+                            <option value="Asia">Asia</option>
+                            <option value="Europe">Europe</option>
+                            <option value="Africa">Africa</option>
+                            <option value="North America">North America</option>
+                            <option value="South America">South America</option>
+                            <option value="Australia/Oceania">Australia/Oceania</option>
+                        </select>
+                        
+                    </div>
+                        <div id = "filter_btn">
+                            <input id = "filter" type="submit" class="btn btn-success" value="Filter">
+                        </div>
+                        <div id = "reset_btn">
+                            <a id = "reset" href="/" class="btn btn-success btn-reset" role="button">Reset</a>
+                        </div>
+                </div>
+
+                <div class="row pt-2">
+                    <div class="inside_table">
+                        <label id = "report_label" class="label">REPORT</label>
+                        <table border="1">
                             <!-- Dice -->
                             <tr>
                                 <%if(Data3.length!=0){%>
@@ -165,9 +200,48 @@
                                 <td><%=data.active_cases %></td>
                             </tr>
                             <%  i++; }) %>
+                            <% } else if (Data1.length==0 && Data2.length==0 && Data3.length==0 && Data4.length==0){ %>
+                                <tr>
+                                    <td colspan="9">No Data Found</td>
+                                </tr>
                             <% } %>
                             <!-- End of Dice -->
+                        </table>
+                        <br>
+                    </div>
+                </div>
+            </form>
+        </div>
 
+        <div class="container px-5 pt-5 pb-3" style="background-color: #550526;">
+            <form method="post">
+                <div class="row">
+                    <div id = "top-row">
+                        <label class="label" for="slice_table">Slice</label>
+                        <select class="select" id="slice_table" name="slice_table"
+                            style="border: solid 1px rgb(116, 115, 115); background-color: white; cursor: pointer; height: 28px; margin-bottom: 15px">
+                            <option value="None" selected>None</option>
+                            <option value="New Cases">New Cases</option>
+                            <option value="Total Deaths">Total Deaths</option>
+                            <option value="New Deaths">New Deaths</option>
+                            <option value="Total Recovered">Total Recovered</option>
+                            <option value="New Recovered">New Recovered</option>
+                            <option value="Active Cases">Active Cases</option>
+                        </select>
+                        
+                    </div>
+                        <div id = "filter_btn">
+                            <input id = "filter" type="submit" class="btn btn-success" value="Filter">
+                        </div>
+                        <div id = "reset_btn">
+                            <a id = "reset" href="/" class="btn btn-success btn-reset" role="button">Reset</a>
+                        </div>
+                </div>
+
+                <div class="row pt-2">
+                    <div class="inside_table">
+                        <label id = "report_label" class="label">REPORT</label>
+                        <table border="1">
                             <!-- Slice -->
                             <tr>
                                 <%if(Data4.length!=0){%>
@@ -185,14 +259,19 @@
                                 <td><%=data.total_covid_cases %></td>
                             </tr>
                             <%  i++; }) %>
+                            <% } else if (Data1.length==0 && Data2.length==0 && Data3.length==0 && Data4.length==0){ %>
+                                <tr>
+                                    <td colspan="9">No Data Found</td>
+                                </tr>
                             <% } %>
                             <!-- End of Slice -->
                         </table>
                         <br>
                     </div>
-                 </div>
+                </div>
             </form>
         </div>
+
     </div>
 </body>
 </html>
